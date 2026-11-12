@@ -1,0 +1,378 @@
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  padding: 120px 20px 80px;
+}
+
+
+/* =========================
+   GRID BACKGROUND
+========================= */
+
+.hero-grid {
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    );
+
+  background-size: 60px 60px;
+
+  mask-image: linear-gradient(
+    to bottom,
+    black,
+    transparent 85%
+  );
+
+  pointer-events: none;
+}
+
+
+/* =========================
+   GLOW EFFECTS
+========================= */
+
+.hero-glow {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  pointer-events: none;
+}
+
+.hero-glow-one {
+  width: 400px;
+  height: 400px;
+
+  background: rgba(57, 255, 136, 0.08);
+
+  top: 15%;
+  left: 20%;
+}
+
+.hero-glow-two {
+  width: 350px;
+  height: 350px;
+
+  background: rgba(0, 200, 255, 0.05);
+
+  bottom: 10%;
+  right: 15%;
+}
+
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 900px;
+
+  text-align: center;
+}
+
+
+/* =========================
+   BADGE
+========================= */
+
+.hero-badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 15px;
+
+  margin-bottom: 28px;
+
+  border: 1px solid rgba(57, 255, 136, 0.2);
+
+  border-radius: 50px;
+
+  background: rgba(57, 255, 136, 0.04);
+
+  color: #9d9d9d;
+
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 7px;
+  height: 7px;
+
+  border-radius: 50%;
+
+  background: #39ff88;
+
+  box-shadow: 0 0 12px #39ff88;
+}
+
+
+/* =========================
+   HEADING
+========================= */
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 92px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+
+  letter-spacing: -4px;
+
+  margin-bottom: 18px;
+}
+
+.hero-name {
+  color: #39ff88;
+
+  text-shadow:
+    0 0 30px rgba(57, 255, 136, 0.15);
+}
+
+
+/* =========================
+   JOB TITLE
+========================= */
+
+.hero h2 {
+  font-size: clamp(25px, 4vw, 42px);
+
+  font-weight: 600;
+
+  color: #d5d5d5;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero p {
+  max-width: 600px;
+
+  margin: 0 auto 35px;
+
+  color: #888;
+
+  font-size: 17px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 35px;
+}
+
+.primary-button,
+.secondary-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 13px 21px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    background 0.3s ease;
+}
+
+.primary-button {
+  background: #39ff88;
+
+  color: #050505;
+}
+
+.primary-button:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 10px 30px rgba(57, 255, 136, 0.2);
+}
+
+.secondary-button {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+
+  color: #ffffff;
+
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.secondary-button:hover {
+  transform: translateY(-3px);
+
+  border-color: rgba(57, 255, 136, 0.4);
+
+  background: rgba(57, 255, 136, 0.05);
+}
+
+
+/* =========================
+   SOCIALS
+========================= */
+
+.hero-socials {
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.hero-socials a {
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+
+  color: #888;
+
+  background: rgba(255, 255, 255, 0.02);
+
+  transition:
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.hero-socials a:hover {
+  color: #39ff88;
+
+  border-color: rgba(57, 255, 136, 0.4);
+
+  transform: translateY(-4px);
+}
+
+
+/* =========================
+   SCROLL INDICATOR
+========================= */
+
+.scroll-indicator {
+  position: absolute;
+
+  bottom: 30px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 7px;
+
+  color: #666;
+
+  font-size: 11px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 2px;
+}
+
+
+/* =========================
+   HERO RESPONSIVE
+========================= */
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 120px 20px 90px;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+
+    width: 100%;
+  }
+
+  .primary-button,
+  .secondary-button {
+    width: 100%;
+
+    max-width: 280px;
+  }
+
+  .scroll-indicator {
+    display: none;
+  }
+
+}
